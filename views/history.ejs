@@ -1,0 +1,39 @@
+<% include partials/header %>
+<div class="listat">
+<h1 class="table_ostikko">Historia</h1>
+<h2><%= message %></h2>
+
+<% if( typeof history != 'undefined' ? history: false) {%>
+<table class='tabble'>
+    <tr class="otsikot">
+        <th>Pelaaja 1</th>
+        <th>Pelaaja 2</th>
+        <th>Peli</th>
+        <th>Voittaja</th>
+    </tr>
+    <% for(let i=0;i<history.length;i++){ %>
+    <tr class="tr<% if(i % 2==0){%>1<%}else{%>2<%} %>">
+         <td>
+            <%= history[i].Player1 %>
+         </td>
+        <td>
+            <%= history[i].Player2 %>
+        </td>
+        <td>
+            <%= history[i].Gamename %>
+        </td>
+        <td>
+            <% if(history[i].Winner==1){ %>
+               <%=  history[i].Player1 %>
+           <% }else{ %>
+              <%=  history[i].Player2 %>
+          <% }  %>
+        </td>
+    </tr>
+    <% } %>
+</table>
+<% } %>
+<br>
+<a class="back" href="/profile">Takaisin profiiliin</a>
+</div>
+<% include partials/footer %>

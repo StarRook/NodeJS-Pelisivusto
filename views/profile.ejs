@@ -1,0 +1,55 @@
+<% include partials/header %>
+<section id="profilesection" style="text-align:center">
+    <img class="profile_pic" src=" <%= typeof file != 'undefined' ? file : '' %>" />
+    <h2 id="message"><%= message %></h2>
+    <h3><%= typeof session.Username != 'undefined' ? session.Username : '' %></h3>
+    <p id="email"><%= typeof session.Email != 'undefined' ? session.Email : '' %></p>
+    <div>
+        <a href="/userlist"><button>All active users</button></a>
+        <a href="/history"><button>Game History</button></a>
+    </div>
+    <div>
+        <button id="changePasswordButton">Change Password</button>
+        <button id="changePictureButton">Change Profile picture</button>
+    </div>
+</section>
+
+<section id="changePasswordModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span id="closeSpan2" class="close">&times;</span>
+            <h2>Change password</h2>
+        </div>
+        <div class="modal-body">
+                <form id="change" method="post">
+                <input id="old" placeholder="Old Password" type="password" name="oldpassword" required>
+                <br>
+                <input id="new" placeholder="New Password" type="password" name="newpassword" required>
+                <br>
+                <button type="submit" value="NewPassword">Change</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section id="changePictureModal" class="modal">
+<div class="modal-content">
+    <div class="modal-header">
+        <span id="closeSpan1" class="close">&times;</span>
+        <h2>Change profile picture</h2>
+    </div>
+    <div class="modal-body">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input name="myImage" type="file" id="fileInput"><br>
+                <button type="submit" value="Submit">Change</button>
+            </form>
+    </div>
+</div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="/javascript/profilemodaljs.js"></script>
+<script type="text/javascript" src="/javascript/jquery_ajax.js"></script>
+
+
+<% include partials/footer %>

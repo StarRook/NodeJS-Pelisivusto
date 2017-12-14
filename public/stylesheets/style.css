@@ -1,0 +1,483 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+html{
+	position: relative;
+	min-height: 100%;
+	font-family: 'Open Sans', 'sans-serif';
+	width:100%;
+	height:100%;
+	min-height: 100%;
+	min-width: 100%;
+}
+
+body{
+	margin:0;
+	width:100%;
+	height:100%;
+	min-height: 100%;
+	min-width: 100%;
+}
+
+header{
+	background-color: #F47983;
+	width: 100%;
+	height:76px;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	border-bottom: 5px solid #DB5A6B;
+}
+
+header ul{
+	list-style: none;
+}
+
+header li{
+	display: inline-block;
+	float: left;
+	padding: 10px;
+}
+
+header a{
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+nav{
+	float:right;
+	padding-top: 20px;
+	padding-right: 20px;
+	font-family: 'Open Sans', 'sans-serif';
+}
+
+#logo{
+	padding-top: 30px;
+	float:left;
+	width:80px;
+	height:50px;
+	background: url(../images/logo.png) no-repeat center;
+	display: block;
+}
+
+.logindiv{
+	width:100%;
+	height: 100%;
+	background-color: #b4b4b4;
+}
+
+.logincontainer{
+	width: 30%;
+	height: 450px;
+	background-color: #FFF;
+
+	position: absolute;
+	left: 0; right: 0;
+	top: 0; bottom: 0;
+	margin: auto;
+
+	max-width: 100%;
+	max-height: 100%;
+	overflow: hidden;
+
+	text-align: center;
+
+	box-shadow: 10px 10px 10px #999;
+}
+
+.logincontainer input{
+	padding: 5px;
+	background-color: #EAEAEA;
+	width: 70%;
+	margin: auto;
+	height: 30px;
+	font-size: 1.3em;
+	border: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.logincontainer form{
+	width:100%;
+	height:50%;
+	position:absolute;
+	left: 0; right: 0;
+	top: 0; bottom: 0;
+	margin:auto;
+}
+
+.logincontainer button{
+	background-color: #11b811;
+	color:#FFF;
+	font-size: 1.2em;
+	height:40px;
+	border: none;
+	width: 70%;
+	margin: auto;
+}
+
+form span{
+	color:green;
+}
+
+form span:hover{
+	text-decoration: underline;
+}
+
+.logincontainer button:hover{
+	background-color: #49c738;
+}
+
+#game{
+	text-align: center;
+}
+
+#game table{
+	margin:auto;
+}
+
+#game table th{
+	font-size: 1.3em;
+}
+
+#gamemenu{
+	display: flex;
+	text-align: center;
+	margin-left: 15%;
+	margin-right: 15%;
+	width: 70%;
+}
+
+#menu-icon {
+	background: url(../images/menu-icon.png);
+	display: none;
+	width: 32px;
+	height: 32px;
+}
+
+.footer{
+	width: 100%;
+	height: 100px;
+	background-color: #888888;
+	position: absolute;
+	left:0;
+	bottom:0;
+}
+
+#game table{
+	border-collapse: collapse;
+	background-color: rgb(83,142,166);
+	color:white;
+}
+
+#game th{
+	border: 1px solid black;
+	width:100px;
+	height:100px;
+}
+
+.hidden{
+	display: none !important; 
+}
+
+/***************/
+/* profile css */
+/***************/
+
+#profilesection{
+	margin-top: 5%;
+}
+
+#profilesection button{
+	border: 2px solid #DB5A6B;
+	background-color: #F47983;
+	border-radius: 15px;
+	height: 40px;
+	width: 200px;
+	margin-bottom: 10px;
+	color:white;
+	font-size: 1.1em;
+}
+
+#profilesection button:hover{
+	background-color: #DB5A6B;
+}
+
+#profilesection button a{
+	color: white;
+	text-decoration: none;
+}
+
+#profilesection img{
+	width: 15%;
+	height: auto;
+	min-width:200px;
+}
+
+/************/
+/*modal css */
+/************/
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: fadeIn;
+	animation-duration: 0.4s;
+}
+
+.modal input{
+	border:1px solid rgba(0, 0, 0, 0.4);
+	padding: 5px;
+	background-color: #EAEAEA;
+	width: 30%;
+	margin: auto;
+	height: 30px;
+	font-size: 1.3em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.modal button{
+	background-color: #11b811;
+	color:#FFF;
+	font-size: 1.2em;
+	height:40px;
+	border: none;
+	width: 30%;
+	margin: auto;
+	padding: 5px;
+	margin-bottom: 40px;
+}
+
+.modal button:hover{
+	background-color: #49c738;
+}
+
+.modal-content{
+	position: fixed;
+	bottom:0;
+	background-color: #FEFEFE;
+	width: 100%;
+	-webkit-animation-name:slideIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: slideIn;
+    animation-duration: 0.4s 
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #F47983;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #DB5A6B;
+    color: white;
+}
+
+/************/
+/*lobby CSS */
+/************/
+
+#lobby{
+	height: calc(100% - 82px);
+	display: flex;
+}
+
+#players{
+	flex:1;
+	height:100%;
+	border-right: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+#rooms{
+	flex:1;
+	height:100%;
+	border-right: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+#rooms button{
+	margin-right:10px;
+	border:none;
+	color:white;
+	background-color: #11b811;
+	padding: 5px;
+	border-radius: 15px;
+}
+
+#rooms button:hover{
+	background-color: #49c738;
+}
+
+#chatboxxi{
+	height:100%;
+	flex:2;
+}
+
+#chatboxinput{
+	height: 5%;
+	display: flex;
+}
+
+#chatboxinput input{
+	border: 0;
+	height:100%;
+	flex: 3;
+	background-color: #CECECE;
+	margin-top: 0;
+	min-height: 40px;
+}
+
+#chatboxinput div{
+	background-color: #11b811;
+	height:100%;
+	color:white;
+	line-height: 40px;
+	text-align: center;
+	flex:1;
+	margin-top: 0;
+	min-height: 40px;
+}
+
+#chatboxxi div:hover{
+	background-color: #49c738;
+}
+
+#chat-text{
+	width: 100%;
+	height: 84%;
+	overflow-y: scroll;
+}
+
+/*************/
+/* Animation */
+/*************/
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+/* media queries */
+@media only screen and (max-width: 640px){
+	header{
+		position:absolute;
+	}
+
+	.logincontainer {
+		width: 80%;
+	}
+
+	#menu-icon {
+		display: inline-block;
+		margin-top: 15px;
+	}
+
+	nav ul, nav:active ul{
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #F47983;
+		right:10px;
+		top:65px;
+		width:35%;
+	}
+
+	nav:hover ul{
+		display: block;
+	}
+
+	nav li{
+		text-align: center;
+		width:100%;
+		padding: 15px 0;
+		margin: 0;
+	}
+
+	#game{
+		margin-top: 85px;
+	}
+
+	#game th{
+		width: 80px;
+		height:80px;
+	}
+
+	#lobby{
+		margin-top:85px;
+		display: block;
+		border: none;
+	}
+
+	#lobby #rooms button{
+		width: 100px;
+	}
+
+	#lobby #players{
+		display: block;
+		border: none;
+		height:20%;
+	}
+
+	#lobby #rooms{
+		display: block;
+		border: none;
+		height:20%;
+	}
+
+	#lobby #chatboxxi{
+		display: block;
+		border: none;
+		height:30%;
+	}
+}
+
+@media (min-width:640px){
+	#lobby{
+		display: flex;
+	}
+}

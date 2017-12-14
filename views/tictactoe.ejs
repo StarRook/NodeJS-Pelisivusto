@@ -1,0 +1,65 @@
+<% include partials/header %>
+
+<section id="lobby">
+    <div class="hidden">
+        <p id="username"><%= typeof session.Username != 'undefined' ? session.Username : '' %></p>
+        <p id="id"><%= typeof session.PlayerID != 'undefined' ? session.PlayerID : '' %></p>
+    </div>
+    <section id="players">
+        <h3>PLAYERS:</h3>
+        <hr>
+        <ul id="playerList"></ul>
+    </section>
+    <section id="rooms">
+        <h3>GAMEROOMS:<span><button id="createButton" style="float:right" class="btn btn-info">CREATE ROOM</button></span></h3>
+        <hr>
+        <ul id="gameRooms"></ul>
+    </section>
+    <section id="chatboxxi">
+        <h3>CHAT:</h3>
+        <hr>
+        <article id="chat-text">
+
+        </article>
+        <article id="chatboxinput">
+            <input type="text" id="textField">
+            <div id="sendButton">Send</div>
+        </article>
+    </section>
+</section>
+
+<div id="game" class="hidden">
+    <div>
+        <div>
+            <h2 id="gameHeader">Waiting for other player...</h2>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th id="s1"></th>
+                    <th id="s2"></th>
+                    <th id="s3"></th>
+                </tr>
+                <tr>
+                    <th id="s4"></th>
+                    <th id="s5"></th>
+                    <th id="s6"></th>
+                </tr>
+                <tr>
+                    <th id="s7"></th>
+                    <th id="s8"></th>
+                    <th id="s9"></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+<script>
+const socket = io();
+</script>
+
+<script src="/javascript/tictactoe.js"></script>
+
+<% include partials/footer %>

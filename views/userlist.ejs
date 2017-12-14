@@ -1,0 +1,67 @@
+<% include partials/header %>
+<div class="listat">
+<h1 class="table_ostikko">Users</h1>
+<h2><%= message %></h2>
+<br>
+<% if( typeof users != 'undefined' ? users: false) {%>
+
+<script type="text/javascript">
+    let usersData=[];
+    let l = 0;
+</script>
+
+<table class='tabble'>
+    <tr class="otsikot">
+        <th>Profiilikuva</th>
+        <th>Käyttäjä</th>
+        <th>Taso</th>
+        <th>User Id</th>
+        <th>Pelattuja pelejä</th>
+        <th>Lisää ystäväksi</th>
+    </tr>
+    <% for(let i=0;i<users.length;i++){ %>
+    <tr class="<%= users[i].PlayerID %> tr<% if(i % 2==0){%>1<%}else{%>2<%} %> ">
+        <td class="profile">
+            <img class="profile_small" src="uploads/<%= users[i].ProfilePic %>">
+        </td>
+        <td class="username">
+            <%= users[i].Username %>
+        </td>
+        <td class="level">
+            <%= users[i].Level %>
+        </td>
+        <td class="id">
+            <%= users[i].PlayerID %>
+        </td>
+        <td class="games">
+            <%= users[i].Games %>
+        </td>
+        <td class="frow">
+            <!-- TODO TEE LOPPUUN
+            <button class="userButt" type="button">lisää kaveriksi!</button>
+            -->
+        </td>
+        <script type="text/javascript">
+            usersData[l]= JSON.stringify(<%= users[i].PlayerID %>);
+            l++;
+        </script>
+    </tr>
+    <% } %>
+</table>
+<% } %>
+<br>
+<script type="text/javascript">
+
+    const userID = JSON.stringify(<%= session.PlayerID %>);
+
+</script>
+
+<a class="back" href="/profile">Takaisin profiiliin</a>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="/javascript/ajax_friends.js"></script>
+<% include partials/footer %>

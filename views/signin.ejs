@@ -1,0 +1,23 @@
+<% include partials/header %>
+<div class="logindiv"> <!--just for styling -->
+<section id="loginsection" class="logincontainer">
+    <form method="post" action="/login">
+        <input type="text" placeholder="Username" name="username" title="username"/>
+        <input type="password" name="password" placeholder="Password" title="password"/>
+        <button type="submit" name="submit" value="button" title="button">LOGIN</button>
+        <p id="eiTilia">Not registered? <span>Create an account</span></p>
+    </form>
+</section>
+
+<section id="registersection" class="logincontainer hidden">
+    <form action="/register" method="post">
+        <input type="text" placeholder="Username" name="username" title="username"/>
+        <input type="text" placeholder="Email" name="email" title="email"/>
+        <input type="password" placeholder="Password" name="password" title="password"/>
+        <button type="submit" name="submit" value="button" title="button">REGISTER</button>
+        <p id='onJoTili'>Already have an account? <span>Login</span></p>
+    </form>
+</section>
+</div>
+<script src="/javascript/signin.js"></script>
+<%include partials/footer %>
