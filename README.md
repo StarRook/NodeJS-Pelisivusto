@@ -1,4 +1,4 @@
-# projekti
+# NodeJS Pelisivusto
 Tämä on Henri Kekkosen kanssa tehty Web-tekniikan perusteet kurssin projekti.
 Opiskelimme itsenäisesti koulun ohella Node.JS jotta voisimma käyttää sitä projektissamme.
 Projektista löytää:
